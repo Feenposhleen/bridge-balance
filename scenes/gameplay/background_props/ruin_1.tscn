@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://7ntnatncnlur"]
+
+[ext_resource type="Material" uid="uid://dbn7tdeghd14l" path="res://assets/models/props/props_material_static.tres" id="1_e46ud"]
+[ext_resource type="ArrayMesh" uid="uid://ctswf3vwt4tc6" path="res://assets/models/props/ruin1.res" id="2_37thf"]
+[ext_resource type="Texture2D" uid="uid://uj175l0rjslf" path="res://assets/sprites/smoke_07_256.png" id="3_37thf"]
+
+[sub_resource type="Curve" id="Curve_37thf"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, -296.012), 0.0, 0.0, 0, 0, Vector2(0.976699, 343.092), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_1v5na"]
+curve = SubResource("Curve_37thf")
+
+[sub_resource type="Curve" id="Curve_7frlg"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.262136, 0.520954), 3.81412, 3.81412, 0, 0, Vector2(0.576699, 0.957731), -0.750635, -0.750635, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_5ijyu"]
+curve = SubResource("Curve_7frlg")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nbs3n"]
+angle_min = 1.07288e-05
+angle_max = 1.07288e-05
+angle_curve = SubResource("CurveTexture_1v5na")
+direction = Vector3(0, 0, 0)
+angular_velocity_min = -52.08
+angular_velocity_max = 28.65
+gravity = Vector3(0, 2.215, 0)
+radial_accel_min = -2.23517e-06
+radial_accel_max = -2.23517e-06
+tangential_accel_min = -2.23517e-06
+tangential_accel_max = -2.23517e-06
+scale_curve = SubResource("CurveTexture_5ijyu")
+turbulence_noise_strength = 0.06
+turbulence_noise_scale = 0.007
+turbulence_noise_speed_random = 0.08
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pc5vs"]
+transparency = 1
+shading_mode = 0
+disable_ambient_light = true
+albedo_color = Color(0.717647, 0.482353, 0.333333, 0.643137)
+albedo_texture = ExtResource("3_37thf")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ggk25"]
+material = SubResource("StandardMaterial3D_pc5vs")
+size = Vector2(10, 10)
+orientation = 2
+
+[node name="Ruin1" type="Node3D"]
+
+[node name="RuinModel" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_e46ud")
+mesh = ExtResource("2_37thf")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58525, 9.4477, 3.42081)
+amount = 20
+lifetime = 4.46
+randomness = 0.4
+local_coords = true
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_nbs3n")
+draw_pass_1 = SubResource("PlaneMesh_ggk25")

@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://wfkevwxvevq5"]
+
+[ext_resource type="Shader" uid="uid://nohpllim41tj" path="res://assets/models/props/props_material.gdshader" id="1_0ioq6"]
+[ext_resource type="Texture2D" uid="uid://6isgxeqpm5wo" path="res://assets/models/props/props-diffuse.png" id="2_1fu4l"]
+[ext_resource type="Texture2D" uid="uid://bs73vydiw53xy" path="res://assets/models/props/props-normal.png" id="3_sbypg"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_0ioq6")
+shader_parameter/zone_positions = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/zone_tilts = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/albedo_texture = ExtResource("2_1fu4l")
+shader_parameter/normal_texture = ExtResource("3_sbypg")

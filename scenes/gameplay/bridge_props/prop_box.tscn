@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr35ggr1243b8"]
+
+[ext_resource type="Script" uid="uid://dnfp8irfjhu6r" path="res://scenes/gameplay/bridge_props/prop.gd" id="1_3514u"]
+[ext_resource type="Material" uid="uid://wfkevwxvevq5" path="res://assets/models/props/props_material.tres" id="2_8blqc"]
+[ext_resource type="ArrayMesh" uid="uid://bst0bpnpixg6l" path="res://assets/models/props/box.res" id="3_bf4ef"]
+
+[node name="Box" type="Node3D"]
+script = ExtResource("1_3514u")
+radius_sq = 10.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.797001, 4.09938e-10, 0.0692095, 0.0692095, -3.35527e-08, -0.797001, 2.49431e-09, 0.8, -3.34623e-08, 0.000792116, 0.231455, -0.351174)
+material_override = ExtResource("2_8blqc")
+mesh = ExtResource("3_bf4ef")

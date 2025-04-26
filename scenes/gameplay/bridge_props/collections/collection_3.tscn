@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctxp2qj57rkfn"]
+
+[ext_resource type="Script" uid="uid://bml6d20yyr0nm" path="res://scenes/gameplay/bridge_props/collections/prop_collection.gd" id="1_qdxiq"]
+[ext_resource type="PackedScene" uid="uid://cbw76t38v3quu" path="res://scenes/gameplay/bridge_props/collections/prop_collection_ref.tscn" id="2_uxl6a"]
+[ext_resource type="PackedScene" uid="uid://cupqy6snal6i5" path="res://scenes/gameplay/bridge_props/civilian_1.tscn" id="3_gthue"]
+[ext_resource type="PackedScene" uid="uid://cne15taxx00wv" path="res://scenes/gameplay/bridge_props/prop_wrecked_trailer.tscn" id="4_lehxn"]
+[ext_resource type="PackedScene" uid="uid://dr35ggr1243b8" path="res://scenes/gameplay/bridge_props/prop_box.tscn" id="5_ban5i"]
+[ext_resource type="PackedScene" uid="uid://b7pbtnggnvndd" path="res://scenes/gameplay/bridge_props/civilian_2.tscn" id="5_gthue"]
+[ext_resource type="PackedScene" uid="uid://dov803gc8wlo8" path="res://scenes/gameplay/bridge_props/prop_car.tscn" id="7_lehxn"]
+
+[node name="Collection3" type="Node3D"]
+script = ExtResource("1_qdxiq")
+metadata/_custom_type_script = "uid://bml6d20yyr0nm"
+
+[node name="PropCollectionRef" parent="." instance=ExtResource("2_uxl6a")]
+
+[node name="Civilian1" parent="." instance=ExtResource("3_gthue")]
+transform = Transform3D(0.781956, 0, 0.623334, 0, 1, 0, -0.623334, 0, 0.781956, -0.161934, 0, 0.00498295)
+
+[node name="WreckedTrailer" parent="." instance=ExtResource("4_lehxn")]
+transform = Transform3D(0.935814, 0, 0.352495, 0, 1, 0, -0.352495, 0, 0.935814, -3.04054, 0, -13.2363)
+
+[node name="WreckedTrailer2" parent="." instance=ExtResource("4_lehxn")]
+transform = Transform3D(-0.365397, 0, 0.930852, 0, 1, 0, -0.930852, 0, -0.365397, 4.34072, 0, -34.8057)
+
+[node name="WreckedTrailer3" parent="." instance=ExtResource("4_lehxn")]
+transform = Transform3D(-0.0878345, 0, -0.996135, 0, 1, 0, 0.996135, 0, -0.0878345, -6, 0, -0.043)
+radius_sq = 20.0
+
+[node name="Civilian2" parent="." instance=ExtResource("5_gthue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07907, 0, -14.6082)
+
+[node name="Civilian3" parent="." instance=ExtResource("5_gthue")]
+transform = Transform3D(0.812104, 0, 0.583513, 0, 1, 0, -0.583513, 0, 0.812104, -2.3844, 0, -34.6159)
+
+[node name="Box" parent="." instance=ExtResource("5_ban5i")]
+transform = Transform3D(0.752346, 0, 0.658768, 0, 1, 0, -0.658768, 0, 0.752346, 0.441792, 0, 8.50979)
+
+[node name="Box2" parent="." instance=ExtResource("5_ban5i")]
+transform = Transform3D(0.703903, 0, -0.710296, 0, 1, 0, 0.710296, 0, 0.703903, -5.97895, 0, -19.806)
+
+[node name="Car" parent="." instance=ExtResource("7_lehxn")]
+transform = Transform3D(0.539858, 0, -0.841756, 0, 1, 0, 0.841756, 0, 0.539858, 6, 0, 0)

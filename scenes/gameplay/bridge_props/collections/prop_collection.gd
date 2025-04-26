@@ -1,0 +1,2 @@
+class_name BalancePropCollection
+extends Node3D

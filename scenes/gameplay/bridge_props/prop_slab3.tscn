@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6nllxvh1qbb1"]
+
+[ext_resource type="Script" uid="uid://dnfp8irfjhu6r" path="res://scenes/gameplay/bridge_props/prop.gd" id="1_kmeav"]
+[ext_resource type="Material" uid="uid://wfkevwxvevq5" path="res://assets/models/props/props_material.tres" id="2_fmmnj"]
+[ext_resource type="ArrayMesh" uid="uid://csqla2nbhwfyj" path="res://assets/models/props/slab3.res" id="3_kmeav"]
+
+[node name="Slab3" type="Node3D"]
+transform = Transform3D(1.35602, 0, 0, 0, 1.35602, 0, 0, 0, 1.35602, 0, 0, 0)
+script = ExtResource("1_kmeav")
+weight = 200.0
+radius_sq = 40.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.757655, 0.0104539, 0.256612, -0.0155457, 0.799738, 0.0133201, -0.256354, -0.017601, 0.75761, 0.144142, -0.00101647, -0.0879837)
+material_override = ExtResource("2_fmmnj")
+mesh = ExtResource("3_kmeav")

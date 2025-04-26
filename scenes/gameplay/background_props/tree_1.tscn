@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://wjv3vnej00q4"]
+
+[ext_resource type="Material" uid="uid://dbn7tdeghd14l" path="res://assets/models/props/props_material_static.tres" id="1_qrlej"]
+[ext_resource type="ArrayMesh" uid="uid://68sdb8r8ga8k" path="res://assets/models/props/tree.res" id="2_ettpe"]
+[ext_resource type="Script" uid="uid://cguosyk4c3tee" path="res://scenes/gameplay/background_props/tree_1.gd" id="3_ettpe"]
+
+[node name="Tree1" type="MeshInstance3D"]
+material_override = ExtResource("1_qrlej")
+mesh = ExtResource("2_ettpe")
+script = ExtResource("3_ettpe")

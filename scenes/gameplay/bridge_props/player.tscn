@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0rkp8gm7abbh"]
+
+[ext_resource type="Script" uid="uid://c3mlh2120kb7c" path="res://scenes/gameplay/bridge_props/player.gd" id="1_dap4h"]
+[ext_resource type="Material" uid="uid://wfkevwxvevq5" path="res://assets/models/props/props_material.tres" id="1_qhqgy"]
+[ext_resource type="ArrayMesh" uid="uid://dme8hkb7vde4c" path="res://assets/models/props/truck_body.res" id="2_dqkch"]
+[ext_resource type="AudioStream" uid="uid://bf8htndok8s0s" path="res://assets/sounds/carengine.ogg" id="2_ext2o"]
+[ext_resource type="ArrayMesh" uid="uid://bfgqaslsvr8u3" path="res://assets/models/props/truck_wheel.res" id="3_qlg0r"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_dap4h")
+weight = 400.0
+
+[node name="MotorSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_ext2o")
+pitch_scale = 2.31
+autoplay = true
+
+[node name="MainModel" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_qhqgy")
+mesh = ExtResource("2_dqkch")
+
+[node name="Wheel1" type="MeshInstance3D" parent="MainModel"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 1.49723, 0.662854, 1.0254)
+material_override = ExtResource("1_qhqgy")
+mesh = ExtResource("3_qlg0r")
+skeleton = NodePath("../..")
+
+[node name="Wheel2" type="MeshInstance3D" parent="MainModel"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 1.49723, 0.662854, -1.50505)
+material_override = ExtResource("1_qhqgy")
+mesh = ExtResource("3_qlg0r")
+skeleton = NodePath("../..")
+
+[node name="Wheel3" type="MeshInstance3D" parent="MainModel"]
+transform = Transform3D(-4.17444e-08, 1, -8.34888e-08, 0.955, 4.37114e-08, 0, -3.64941e-15, 8.74228e-08, 0.955, -1.48235, 0.662854, 1.0254)
+material_override = ExtResource("1_qhqgy")
+mesh = ExtResource("3_qlg0r")
+skeleton = NodePath("../..")
+
+[node name="Wheel4" type="MeshInstance3D" parent="MainModel"]
+transform = Transform3D(-4.17444e-08, 1, -8.34888e-08, 0.955, 4.37114e-08, 0, -3.64941e-15, 8.74228e-08, 0.955, -1.48235, 0.662854, -1.50505)
+material_override = ExtResource("1_qhqgy")
+mesh = ExtResource("3_qlg0r")
+skeleton = NodePath("../..")

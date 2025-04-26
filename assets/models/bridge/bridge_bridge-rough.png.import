@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://pu2nky531pqn"
+path.s3tc="res://.godot/imported/bridge_bridge-rough.png-843b4bd439de5c7865bc14aeba17ef49.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "ff378323253ec250b1f9f0c9fc71249d"
+}
+
+[deps]
+
+source_file="res://assets/models/bridge/bridge_bridge-rough.png"
+dest_files=["res://.godot/imported/bridge_bridge-rough.png-843b4bd439de5c7865bc14aeba17ef49.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

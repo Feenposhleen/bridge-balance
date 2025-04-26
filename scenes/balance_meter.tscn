@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7pbq0dw4tnw4"]
+
+[ext_resource type="Texture2D" uid="uid://dmw55fi05wt0u" path="res://assets/images/balance_arc.svg" id="1_4xi2j"]
+[ext_resource type="Script" uid="uid://7ipq2xmce5xk" path="res://scenes/balance_meter.gd" id="1_wvnn0"]
+[ext_resource type="Texture2D" uid="uid://dq1hd5gxs3al6" path="res://assets/images/balance_arrow.svg" id="2_wvnn0"]
+[ext_resource type="AudioStream" uid="uid://dfyqralrbype3" path="res://assets/sounds/bridge_tilt_sound/bridge-collapse.ogg" id="4_31x3o"]
+
+[node name="BalanceMeter" type="Node2D"]
+script = ExtResource("1_wvnn0")
+
+[node name="Arc" type="Sprite2D" parent="."]
+position = Vector2(-1, 2)
+texture = ExtResource("1_4xi2j")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(187.111, 8.556)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wvnn0")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_31x3o")

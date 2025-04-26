@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://swbdojj52kfu"]
+
+[ext_resource type="Script" uid="uid://dnfp8irfjhu6r" path="res://scenes/gameplay/bridge_props/prop.gd" id="1_sofyq"]
+[ext_resource type="Material" uid="uid://wfkevwxvevq5" path="res://assets/models/props/props_material.tres" id="2_awv1b"]
+[ext_resource type="ArrayMesh" uid="uid://d00u0lhcqvi8b" path="res://assets/models/props/wires1.res" id="3_sofyq"]
+
+[node name="Wires" type="Node3D"]
+script = ExtResource("1_sofyq")
+radius_sq = 20.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.748555, 0.0663465, 0.274343, -0.0602724, 0.797223, -0.0283429, -0.275741, 0.00585173, 0.750955, 0.144142, -0.00101647, -0.0879837)
+material_override = ExtResource("2_awv1b")
+mesh = ExtResource("3_sofyq")

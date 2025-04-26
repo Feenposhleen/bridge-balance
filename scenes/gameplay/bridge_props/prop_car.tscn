@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dov803gc8wlo8"]
+
+[ext_resource type="Script" uid="uid://dnfp8irfjhu6r" path="res://scenes/gameplay/bridge_props/prop.gd" id="1_1fp3j"]
+[ext_resource type="Material" uid="uid://wfkevwxvevq5" path="res://assets/models/props/props_material.tres" id="2_k8lly"]
+[ext_resource type="ArrayMesh" uid="uid://cnoerx2vv5a4n" path="res://assets/models/props/car.res" id="3_xsq6j"]
+
+[node name="Car" type="Node3D"]
+script = ExtResource("1_1fp3j")
+weight = 200.0
+friction = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.12512, -0.30199, 0.098427, 0.301093, 1.12941, 0.0234354, -0.10114, 0.00279541, 1.1647, -0.315491, 1.00764, -0.430642)
+material_override = ExtResource("2_k8lly")
+mesh = ExtResource("3_xsq6j")

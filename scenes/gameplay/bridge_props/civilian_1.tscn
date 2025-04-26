@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://cupqy6snal6i5"]
+
+[ext_resource type="Script" uid="uid://b3edrihqio342" path="res://scenes/gameplay/bridge_props/civilian_prop.gd" id="1_7l3fx"]
+[ext_resource type="Material" uid="uid://wfkevwxvevq5" path="res://assets/models/props/props_material.tres" id="2_wi3i2"]
+[ext_resource type="ArrayMesh" uid="uid://c4nka6prnajey" path="res://assets/models/props/body1.res" id="3_7l3fx"]
+[ext_resource type="ArrayMesh" uid="uid://opi58ipo3u42" path="res://assets/models/props/arm1.res" id="4_7l3fx"]
+[ext_resource type="Script" uid="uid://ctiywtfllsyui" path="res://scenes/gameplay/bridge_props/arm_wave.gd" id="5_ear1k"]
+
+[node name="Civilian1" type="Node3D"]
+script = ExtResource("1_7l3fx")
+radius_sq = 5.0
+metadata/_custom_type_script = "uid://b3edrihqio342"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_wi3i2")
+mesh = ExtResource("3_7l3fx")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299646, 1.42808, 0.108764)
+material_override = ExtResource("2_wi3i2")
+mesh = ExtResource("4_7l3fx")
+script = ExtResource("5_ear1k")

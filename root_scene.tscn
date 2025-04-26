@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch535btcsqim8"]
+
+[ext_resource type="PackedScene" uid="uid://cbplm572enobr" path="res://scenes/level1.tscn" id="1_itajj"]
+[ext_resource type="Script" uid="uid://bbg7jyuj3o5dg" path="res://ui_manager.gd" id="2_c77vg"]
+
+[node name="RootScene" type="Node3D"]
+
+[node name="Level1" parent="." instance=ExtResource("1_itajj")]
+
+[node name="UiManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_c77vg")

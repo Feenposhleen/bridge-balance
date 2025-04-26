@@ -1,0 +1,136 @@
+[gd_scene load_steps=6 format=3 uid="uid://bt0pxwfujjbdc"]
+
+[ext_resource type="Script" uid="uid://ppajk72dytgk" path="res://scenes/gameplay/props.gd" id="1_ravnw"]
+[ext_resource type="Script" uid="uid://dnfp8irfjhu6r" path="res://scenes/gameplay/bridge_props/prop.gd" id="2_qym3l"]
+[ext_resource type="Material" uid="uid://wfkevwxvevq5" path="res://assets/models/props/props_material.tres" id="3_ravnw"]
+[ext_resource type="ArrayMesh" uid="uid://cd5we8jpsidbe" path="res://assets/models/bridge/bridge_pylon.res" id="4_evkq8"]
+[ext_resource type="PackedScene" uid="uid://d0rkp8gm7abbh" path="res://scenes/gameplay/bridge_props/player.tscn" id="8_hlmwl"]
+
+[node name="Props" type="Node3D"]
+script = ExtResource("1_ravnw")
+
+[node name="Player" parent="." instance=ExtResource("8_hlmwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.804701)
+
+[node name="Pylons" type="Node3D" parent="."]
+script = ExtResource("2_qym3l")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, 0)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, 0)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -64)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -64)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -128)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -128)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -192)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -192)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -256)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -256)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -320)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -320)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -384)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -384)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -448)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -448)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -512)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -512)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -576)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -576)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -640)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -640)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.751, -704)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="Pylons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0.751, -704)
+material_override = ExtResource("3_ravnw")
+mesh = ExtResource("4_evkq8")

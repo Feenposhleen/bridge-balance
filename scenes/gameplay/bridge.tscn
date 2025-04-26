@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://23ayxe4wkfj1"]
+
+[ext_resource type="Material" uid="uid://f01fswmsu7gk" path="res://assets/models/bridge/bridge_material.tres" id="1_4auv1"]
+[ext_resource type="ArrayMesh" uid="uid://d35kuw4rmi05l" path="res://assets/models/bridge/bridge.res" id="1_kcee4"]
+[ext_resource type="Script" path="res://scenes/gameplay/bridge.gd" id="1_ptgjv"]
+
+[node name="Bridge" type="Node3D"]
+script = ExtResource("1_ptgjv")
+
+[node name="MainModel" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_4auv1")
+lod_bias = 0.001
+mesh = ExtResource("1_kcee4")

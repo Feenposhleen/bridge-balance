@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6s6eyc7q6pxy"]
+
+[ext_resource type="Script" uid="uid://bml6d20yyr0nm" path="res://scenes/gameplay/bridge_props/collections/prop_collection.gd" id="1_tm3m3"]
+[ext_resource type="PackedScene" uid="uid://dr35ggr1243b8" path="res://scenes/gameplay/bridge_props/prop_box.tscn" id="2_eumug"]
+[ext_resource type="PackedScene" uid="uid://cbw76t38v3quu" path="res://scenes/gameplay/bridge_props/collections/prop_collection_ref.tscn" id="5_qplfh"]
+[ext_resource type="PackedScene" uid="uid://cupqy6snal6i5" path="res://scenes/gameplay/bridge_props/civilian_1.tscn" id="6_wclgg"]
+[ext_resource type="PackedScene" uid="uid://cne15taxx00wv" path="res://scenes/gameplay/bridge_props/prop_wrecked_trailer.tscn" id="7_6qwxu"]
+
+[node name="Collection2" type="Node3D"]
+script = ExtResource("1_tm3m3")
+metadata/_custom_type_script = "uid://bml6d20yyr0nm"
+
+[node name="PropCollectionRef" parent="." instance=ExtResource("5_qplfh")]
+
+[node name="Civilian1" parent="." instance=ExtResource("6_wclgg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9751, 0, -22.1212)
+
+[node name="WreckedTrailer" parent="." instance=ExtResource("7_6qwxu")]
+transform = Transform3D(0.935814, 0, 0.352495, 0, 1, 0, -0.352495, 0, 0.935814, 4, 0, -8.78573)
+
+[node name="WreckedTrailer3" parent="." instance=ExtResource("7_6qwxu")]
+transform = Transform3D(-0.642106, 0, -0.766616, 0, 1, 0, 0.766616, 0, -0.642106, -4, 0, -20.902)
+
+[node name="WreckedTrailer2" parent="." instance=ExtResource("7_6qwxu")]
+transform = Transform3D(-0.60578, 0, -0.795632, 0, 1, 0, 0.795632, 0, -0.60578, -0.0648713, 0, 3.36079)
+
+[node name="Box" parent="." instance=ExtResource("2_eumug")]
+transform = Transform3D(0.752346, 0, 0.658768, 0, 1, 0, -0.658768, 0, 0.752346, 0.441792, 0, 8.50979)
+
+[node name="Box2" parent="." instance=ExtResource("2_eumug")]
+transform = Transform3D(0.703903, 0, -0.710296, 0, 1, 0, 0.710296, 0, 0.703903, 1.97737, 0, 7.13323)

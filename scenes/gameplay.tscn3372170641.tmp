@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://caxtl3b3p0anl"]
+
+[ext_resource type="PackedScene" uid="uid://23ayxe4wkfj1" path="res://scenes/gameplay/bridge.tscn" id="1_00tan"]
+[ext_resource type="Script" uid="uid://d0s7af2tub7u3" path="res://scenes/gameplay.gd" id="1_l1v76"]
+[ext_resource type="PackedScene" uid="uid://dtmw445ex6ebd" path="res://scenes/gameplay/background.tscn" id="2_l1v76"]
+[ext_resource type="Script" uid="uid://cywwr4rph0dki" path="res://scenes/main_camera.gd" id="2_ocj2s"]
+[ext_resource type="PackedScene" uid="uid://bt0pxwfujjbdc" path="res://scenes/gameplay/props.tscn" id="6_din8e"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l1v76"]
+sky_curve = 0.235375
+sky_energy_multiplier = 0.76
+
+[sub_resource type="Sky" id="Sky_ct7aa"]
+sky_material = SubResource("ProceduralSkyMaterial_l1v76")
+
+[sub_resource type="Environment" id="Environment_l1v76"]
+background_mode = 2
+sky = SubResource("Sky_ct7aa")
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 2.6
+glow_bloom = 0.24
+glow_hdr_scale = 2.31
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.288082, 0.423085, 0.516725, 1)
+fog_light_energy = 2.63
+fog_density = 1.0
+fog_height = -7.21
+fog_height_density = 0.115
+fog_depth_curve = 1.93186
+fog_depth_end = 198.6
+
+[node name="GameplayScene" type="Node3D"]
+script = ExtResource("1_l1v76")
+
+[node name="MainCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.792811, 0.609467, 0, -0.609467, 0.792811, 0, 21.255, 16.1795)
+environment = SubResource("Environment_l1v76")
+script = ExtResource("2_ocj2s")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.290535, -2.98023e-08, 0.956864, -0.646817, 0.736924, 0.196395, -0.705136, -0.675976, 0.214102, 17.3355, 23.8658, 3.87888)
+
+[node name="Bridge" parent="." instance=ExtResource("1_00tan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33.4838)
+
+[node name="Background" parent="." instance=ExtResource("2_l1v76")]
+
+[node name="Props" parent="." instance=ExtResource("6_din8e")]

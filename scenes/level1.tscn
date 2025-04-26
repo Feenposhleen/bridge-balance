@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbplm572enobr"]
+
+[ext_resource type="Script" uid="uid://bml6d20yyr0nm" path="res://scenes/gameplay/bridge_props/collections/prop_collection.gd" id="1_g2h75"]
+[ext_resource type="PackedScene" uid="uid://caxtl3b3p0anl" path="res://scenes/gameplay.tscn" id="2_6sh32"]
+[ext_resource type="PackedScene" uid="uid://bt0pxwfujjbdc" path="res://scenes/gameplay/props.tscn" id="3_ejswk"]
+[ext_resource type="PackedScene" uid="uid://k45f0xw8hsok" path="res://scenes/gameplay/bridge_props/collections/collection_1.tscn" id="4_bbk5w"]
+[ext_resource type="PackedScene" uid="uid://b6s6eyc7q6pxy" path="res://scenes/gameplay/bridge_props/collections/collection_2.tscn" id="5_conm7"]
+[ext_resource type="PackedScene" uid="uid://ctxp2qj57rkfn" path="res://scenes/gameplay/bridge_props/collections/collection_3.tscn" id="6_d3jkd"]
+
+[node name="Level1" type="Node3D"]
+script = ExtResource("1_g2h75")
+metadata/_custom_type_script = "uid://bml6d20yyr0nm"
+
+[node name="GameplayScene" parent="." instance=ExtResource("2_6sh32")]
+
+[node name="Props" parent="GameplayScene" instance=ExtResource("3_ejswk")]
+
+[node name="Collection1" parent="GameplayScene/Props" instance=ExtResource("4_bbk5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -57.3711)
+
+[node name="Collection2" parent="GameplayScene/Props" instance=ExtResource("5_conm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -125.419)
+
+[node name="Collection3" parent="GameplayScene/Props" instance=ExtResource("6_d3jkd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -221.362)

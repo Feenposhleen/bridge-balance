@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cne15taxx00wv"]
+
+[ext_resource type="Script" uid="uid://dnfp8irfjhu6r" path="res://scenes/gameplay/bridge_props/prop.gd" id="1_ykgau"]
+[ext_resource type="Material" uid="uid://wfkevwxvevq5" path="res://assets/models/props/props_material.tres" id="2_viu05"]
+[ext_resource type="ArrayMesh" uid="uid://c55u14n0yxibb" path="res://assets/models/props/wreck_trailer_body.res" id="3_ljfew"]
+[ext_resource type="ArrayMesh" uid="uid://kmglgjidl6vm" path="res://assets/models/props/wreck_trailer_wheel.res" id="4_cgvnr"]
+
+[node name="WreckedTrailer" type="Node3D"]
+script = ExtResource("1_ykgau")
+weight = 200.0
+friction = 0.2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.797001, 4.09938e-10, 0.0692095, 0.0692095, -3.35527e-08, -0.797001, 2.49431e-09, 0.8, -3.34623e-08, -0.633919, -0.387194, -0.223043)
+material_override = ExtResource("2_viu05")
+mesh = ExtResource("3_ljfew")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.796242, 0.0219744, 0.0742728, 0.0532704, 0.401529, -0.689882, -0.056228, 0.691586, 0.398179, -0.0914455, 0.763765, 2.12785)
+material_override = ExtResource("2_viu05")
+mesh = ExtResource("4_cgvnr")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.791274, -5.87076e-05, -0.117835, -0.113503, -0.214544, 0.762291, -0.031657, 0.770695, 0.212196, 2.3496, 0.92507, 1.75011)
+material_override = ExtResource("2_viu05")
+mesh = ExtResource("4_cgvnr")

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cbw76t38v3quu"]
+
+[node name="PropCollectionRef" type="Node3D"]
+
+[node name="RefRight" type="Marker3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 7, 0, 0)
+
+[node name="RefLeft" type="Marker3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7, 0, 0)

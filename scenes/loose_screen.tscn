@@ -1,0 +1,108 @@
+[gd_scene load_steps=10 format=3 uid="uid://bg8lp6ca5uc3l"]
+
+[ext_resource type="Script" uid="uid://bsafmas7dycbi" path="res://scenes/loose_screen.gd" id="1_gxmny"]
+[ext_resource type="FontFile" uid="uid://bsf6dtmv58or" path="res://assets/fonts/GAME_glm.ttf" id="2_ec2h6"]
+[ext_resource type="FontFile" uid="uid://b1crkdv4ni43i" path="res://assets/fonts/Gamer.ttf" id="3_fb3qi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
+modulate_color = Color(0, 0, 0, 0.423529)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+bg_color = Color(3.85046e-07, 0.642966, 0.92504, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+bg_color = Color(4.23551e-06, 0.634986, 0.958754, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
+bg_color = Color(0.24357, 0.625798, 0.931569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
+bg_color = Color(0.144923, 0.63731, 0.923931, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
+bg_color = Color(0.392581, 0.627313, 0.80666, 1)
+
+[node name="LooseScreen" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gxmny")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0885599, 0.0885599, 0.0885599, 0.784314)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ekxnf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = 120.0
+offset_right = 202.0
+offset_bottom = 259.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ec2h6")
+theme_override_font_sizes/font_size = 49
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rtw2f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
+text = "Try again!
+"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -397.0
+offset_top = 69.0
+offset_right = 398.0
+offset_bottom = 315.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ec2h6")
+theme_override_font_sizes/font_size = 90
+text = "YOU HAVE LOST!
+
+"
+
+[node name="Instructions" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -447.0
+offset_top = -183.0
+offset_right = 447.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_fb3qi")
+theme_override_font_sizes/font_size = 40
+text = "Try to save "
+horizontal_alignment = 1
